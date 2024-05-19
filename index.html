@@ -75,9 +75,9 @@ function getColor(value) {
     } else if (value > 0.0 && value < 1) {
         // Green gradient between 0.0 and 1
         return 'rgb(' + Math.floor((value / 0.8) * 255) + ',255,0)';
-    } else if (value >= 1.0 && value <= 3) {
+    } else if (value >= 1.0 && value <= 2.5) {
         // Red gradient from 1.0 to 3
-        return 'rgb(255,' + Math.floor((1 - (value - 1.2) / 1.8) * 255) + ',0)';
+        return 'rgb(255,' + Math.floor((1 - (value - 1) / 1.5) * 255) + ',0)';
     } else {
         // For values outside the range, return red
         return 'rgb(255,0,0)';
@@ -123,7 +123,7 @@ function getColor(value) {
                     var div = L.DomUtil.create('div', 'legend');
                     div.innerHTML += '<div class="legend-title">Percentage of Property Tax</div>';
                     div.innerHTML += '<div class="legend-gradient"></div>';
-                    div.innerHTML += '<div class="legend-labels"><span class="legend-label">0%</span><span class="legend-label">100%</span><span class="legend-label">300%</span></div>';
+                    div.innerHTML += '<div class="legend-labels"><span class="legend-label">0%</span><span class="legend-label">100%</span><span class="legend-label">250%+</span></div>';
                     return div;
                 };
 
